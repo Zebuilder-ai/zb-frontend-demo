@@ -1,0 +1,2 @@
+import{t as e}from"./jsx-runtime-B-hcVAMW.js";import{Z as t,f as n,i as r,z as i}from"./dist-BHRp_Zyh.js";import{t as a}from"./auth-DpcT1Rag.js";var o=e();function s(){let{t:e}=t(),s=a.map(e=>`${e.email} : ${e.password}`).join(`
+`);return(0,o.jsxs)(i,{gap:5,children:[(0,o.jsx)(r,{tone:`info`,title:e(`auth.login.mockAccounts.title`),children:e(`auth.login.mockAccounts.description`)}),(0,o.jsx)(n,{filename:e(`auth.login.mockAccounts.filename`),language:`text`,code:s})]})}export{s as MockAccountsHint};
