@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aperçu widget</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Minimal static host page for the Configurator's live preview
+      (features/widget-config's WidgetPreview) and for the Playwright widget
+      journey (e2e/widget.spec.ts, loaded with its own aggressive host CSS
+      appended for that specific test). Not part of the widget bundle itself —
+      it only forwards this page's own query string into the real
+      dist-widget/widget.js script's data-* attributes, so both consumers
+      always see the actual compiled bundle (US-WID02: "prévisualisation
+      utilisant le vrai bundle"), never a re-implementation.
+    -->
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var script = document.createElement('script');
+        script.id = 'zb-widget-script';
+        script.src = '/dist-widget/widget.js';
+        script.async = true;
+        script.dataset.embedKey = params.get('embedKey') || '';
+        script.dataset.position = params.get('position') || 'bottom-right';
+        script.dataset.accent = params.get('accent') || 'var(--iris-700)';
+        script.dataset.radius = params.get('radius') || '14';
+        // This page only ever backs the Configurator's live preview (never a
+        // real snippet embed) — mounting pre-opened is what lets settings
+        // like "Arrondi" (only visible on the open ChatWidget panel, not the
+        // closed ChatLauncher bubble) actually show up.
+        script.dataset.open = 'true';
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
