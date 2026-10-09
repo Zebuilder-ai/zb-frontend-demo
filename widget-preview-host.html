@@ -28,7 +28,7 @@
         var params = new URLSearchParams(window.location.search);
         var script = document.createElement('script');
         script.id = 'zb-widget-script';
-        script.src = '/dist-widget/widget.js';
+        script.src = 'dist-widget/widget.js';
         script.async = true;
         script.dataset.embedKey = params.get('embedKey') || '';
         script.dataset.position = params.get('position') || 'bottom-right';
