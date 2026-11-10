@@ -1,2 +1,2 @@
-import{t as e}from"./jsx-runtime-B-hcVAMW.js";import{I as t,J as n,d as r,r as i}from"./dist-TGShQn3a.js";import{t as a}from"./auth-DgMqBQHj.js";var o=e();function s(){let{t:e}=n(),s=a.map(e=>`${e.email} : ${e.password}`).join(`
+import{t as e}from"./jsx-runtime-B-hcVAMW.js";import{I as t,J as n,d as r,r as i}from"./dist-B8ZJAt2Y.js";import{t as a}from"./auth-DgMqBQHj.js";var o=e();function s(){let{t:e}=n(),s=a.map(e=>`${e.email} : ${e.password}`).join(`
 `);return(0,o.jsxs)(t,{gap:5,children:[(0,o.jsx)(i,{tone:`info`,title:e(`auth.login.mockAccounts.title`),children:e(`auth.login.mockAccounts.description`)}),(0,o.jsx)(r,{filename:e(`auth.login.mockAccounts.filename`),language:`text`,code:s})]})}export{s as MockAccountsHint};
