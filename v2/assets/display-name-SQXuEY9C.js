@@ -1,0 +1,1 @@
+function e(e){return e.name??e.email}export{e as t};
